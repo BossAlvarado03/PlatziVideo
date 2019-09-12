@@ -8,21 +8,35 @@
     <style>
         body {
             margin: 0px;
+            background-color: #8F57Fd;
         }
-        header {
-            background-color: #FC1E47;
+        .header {
+            background-color: #8F57Fd;
             width: 100%;
             heigth: 80px;
         }
-        header img{
+        .header__img{
             width: 200px;
-            margin-top: 5px;
+            margin-top: 10px;
             margin-left: 10px;
+        }
+        .header__menu{
+            margin-right: 30px;
         }
     </style>
     <body>
-        <header>
-                <img src="https://i.ibb.co/D1n4CjZ/Logo-Platzi-Video.png" alt="Logo-Platzi-Video">
+        <header class="header">
+                <img class="header__img"src="https://i.ibb.co/D1n4CjZ/Logo-Platzi-Video.png" alt="Logo-Platzi-Video">
+                <div class="header__menu">
+                    <div class="header__menu--profile">
+                        <img src="https://img.icons8.com/ios/50/000000/name.png" alt="User">
+                        <p>Perfil</p>
+                    </div>
+                    <ul>
+                        <li><a href="/">Cuenta</a></li>
+                        <li><a href="/">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
         </header>
     </body>
 </html>

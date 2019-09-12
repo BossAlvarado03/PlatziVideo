@@ -4,34 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Carrousel1</title>
+    <title>Carrousel 1</title>
 </head>
 <style>
+    body {
+        margin: 0px;
+    }
     .carrousel {
-            width: 100px;
+            width: 100%;
             overflow: scroll;
             padding: 30px;
             position: relative;
         }
-        .carrousel__conteiner {
+    .carrousel__conteiner {
             white-space: nowrap;
             margin: 70px 0px;
             padding-bottom: 10px;
         }
-        .carrouse__item {
-            background-color: black;
+    .carrousel__item {
+            background-color: yellowgreen;
             width: 200px;
             height: 250px;
             border-radius: 20px;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+        }
+        .carrousel__item:hover ~ .carrousel__item {
+            transform: translate3d(100px, 0, 0);
+        }
+        .carrousel__conteiner:hover .carrousel__item {
+            opacity: 0.3;
+        }
+        .carrousel__conteiner:hover .carrousel__item:hover {
+            transform: scale(1.5);
+            opacity: 1;
         }
 </style>
 <body>
-            <section class="carrousel">
-                <div class="carrousel__conteiner">
-                    <div class="carrousel__item">
-    
-                    </div>
+    <section class="carrousel">
+            <div class="carrousel__conteiner">
+                <div class="carrousel__item">
                 </div>
-            </section>
+                <div class="carrousel__item">
+                </div>
+            </div>
+    </section>
 </body>
 </html>

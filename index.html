@@ -10,7 +10,7 @@
         body {
             margin: 0px;
             font-family: 'Muli', sans-serif;
-            background-color: #8F57Fd;
+            background-color: rgb(16, 36, 71);
         }
         .header {
             background-color: #8F57Fd;
@@ -82,11 +82,85 @@
             font-size: 18px;
             height: 50px;
             padding: 0px 20px;
-            width: 70%;
+            width: 50%;
             outline: none;
         }
         ::placeholder {
             color: white;
+        }
+        .carrousel {
+            width: 100%;
+            overflow: scroll;
+            padding: 30px;
+            position: relative;
+        }
+        .carrousel__conteiner {
+            white-space: nowrap;
+            margin: 70px 0px;
+            padding-bottom: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .carrousel-item {
+            width: 200px;
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-right: 10px;
+            display: inline-block;
+            cursor: pointer;
+            transition: 450ms all;
+            transform-origin: center left;
+            position: relative;
+        }
+        .carrousel-item:hover ~ .carrousel-item {
+            transform: translate3d(100px, 0, 0);
+        }
+        .carrousel__conteiner:hover .carrousel-item {
+            opacity: 0.3;
+        }
+        .carrousel__conteiner:hover .carrousel-item:hover {
+            transform: scale(1.5);
+            opacity: 1;
+        }
+        .carrousel-item__img {
+            width: 200px;
+            height: 250px;
+            object-fit: cover;
+        }
+        .carrousel-item__details {
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+            color: white;
+            opacity: 0;
+            transition: 450ms opacity;
+            padding: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            
+        }
+        .carrousel-item__details img {
+            width: 40px;
+            height: 40px;
+        }
+        .carrousel-item__details:hover {
+            opacity: 1;
+        }
+        .carrousel-item__details--title:hover {
+            opacity: 1;
+        }
+        .carrousel-item__details--subtitle:hover {
+            opacity: 1;
+        }
+        ::-webkit-scrollbar {
+            display: none;
         }
     </style>
     <body>
@@ -106,6 +180,61 @@
         <section class="main">
                 <h2 class="main__title">¿Qué quieres ver hoy?</h2>
                 <input class="input" type="text" placeholder="Buscar ...">
+        </section>
+        <section class="carrousel">
+                <div class="carrousel__conteiner">
+                    <div class="carrousel-item">
+                        <img class="carrousel-item__img" src="https://i.ibb.co/tL9N4rf/prework.png" alt="Prework">
+                        <div class="carrousel-item__details">
+                            <div>
+                                <img src="https://i.ibb.co/h7Nsmsg/icons8-play-64.png" alt="Play">
+                                <img src="https://i.ibb.co/zJCHzNq/plus.png" alt="Plus">
+                            </div>
+                            <div>
+                                <p class="carrousel-items__details--title">Prework</p>
+                                <p class="carrousel-items__details--subtitle">Reto 1: 31/08/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrousel-item">
+                        <img class="carrousel-item__img" src="https://i.ibb.co/7R3N53M/Platzi-EJSFD.png" alt="Frontend-Developer">
+                        <div class="carrousel-item__details">
+                            <div>
+                                <img src="https://i.ibb.co/h7Nsmsg/icons8-play-64.png" alt="Play">
+                                <img src="https://i.ibb.co/zJCHzNq/plus.png" alt="Plus">
+                            </div>
+                            <div>
+                                <p class="carrousel-items__details--title">Frontend Developer</p>
+                                <p class="carrousel-items__details--subtitle">Reto 2: 07/09/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrousel-item">
+                        <img class="carrousel-item__img" src="https://i.ibb.co/mTJQ1pw/Fundamentos-Javascript.png" alt="Fundamentos-Javascript">
+                        <div class="carrousel-item__details">
+                            <div>
+                                <img src="https://i.ibb.co/h7Nsmsg/icons8-play-64.png" alt="Play">
+                                <img src="https://i.ibb.co/zJCHzNq/plus.png" alt="Plus">
+                            </div>
+                            <div>
+                                <p class="carrousel-items__details--title">Fundamentos de JavaScript</p>
+                                <p class="carrousel-items__details--subtitle">Reto 3: 14/09/2019</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrousel-item">
+                        <img class="carrousel-item__img" src="https://i.ibb.co/8zG2Rc8/Profesional-Javascript.png" alt="Profesional-Javascript">
+                        <div class="carrousel-item__details">
+                            <div>
+                                <img src="https://i.ibb.co/h7Nsmsg/icons8-play-64.png" alt="Play">
+                                <img src="https://i.ibb.co/zJCHzNq/plus.png" alt="Plus">
+                            </div>
+                            <div>
+                                <p class="carrousel-items__details--title">JavaScript Profesional</p>
+                                <p class="carrousel-items__details--subtitle">Reto 4: 21/09/2019</p>
+                            </div>
+                        </div>
+                    </div>
         </section>
     </body>
 </html>

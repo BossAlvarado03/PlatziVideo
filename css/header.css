@@ -1,10 +1,9 @@
 body {
     margin: 0px;
     font-family: 'Muli', sans-serif;
-    background-color: rgb(16, 36, 71);
 }
 .header {
-    background-color: #8F57Fd;
+    background-color: #21C08B;
     width: 100%;
     height: 80px;
     display: flex;

@@ -57,6 +57,7 @@ body {
 .footer {
     background-color: #8F57Fd;
     display: flex;
+    align-content: flex-end;
     align-items: center;
     height: 100px;
     width: 100%;
